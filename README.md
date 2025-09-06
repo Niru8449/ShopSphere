@@ -10,7 +10,7 @@ It demonstrates a distributed architecture where different services (User Manage
 - Centralized **service discovery** via **Eureka**  
 - **API Gateway** for routing & authentication  
 - Secure **OAuth2/JWT-based authentication**  
-- Independent services for **Users, Products, and Cart**  
+- Independent services for **Users, Products, Cart, Orders, Shipments, and Notifications**  
 - **Feign Client** communication between services  
 - Exception handling via `@ControllerAdvice`  
 
@@ -80,7 +80,10 @@ It demonstrates a distributed architecture where different services (User Manage
 | Product Service       | `/products/{id}`                | Get product by ID                |
 | Cart Service          | `/cart/{userId}`                | Get cart for a user              |
 | Cart Service          | `/cart/{userId}/add`            | Add item to user’s cart          |
-
+| Order Service         | `/orders/create`                | Create a new order               |
+| Notification Service  | `/notifications/send`           | Send notification to seller      |
+| Shipment Service      | `/shipments/create`             | Create a new shipment            |
+| Order Service         | `/orders/{id}/status`           | Update order status              |
 ---
 
 ## 🛠️ Tech Stack
